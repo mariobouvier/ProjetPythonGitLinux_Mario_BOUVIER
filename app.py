@@ -32,11 +32,7 @@ if __name__ == '__main__':
     fig = create_figure()
 
     app.layout = html.Div(children=[
-        html.H1(children='Hello Dash'),
-
-        html.Div(children='''
-            Dash: A web application framework for your data.
-        '''),
+        html.H1(children='Courbe du cours de LVMH'),
 
         dcc.Graph(
             id='example-graph',
@@ -49,4 +45,4 @@ if __name__ == '__main__':
             n_intervals=0
         )
     ])
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='172.31.2.170', port=8050)
